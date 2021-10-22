@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AppliController">
+   <children>
+      <VBox layoutX="22.0" layoutY="31.0" prefHeight="313.0" prefWidth="826.0">
+         <children>
+            <TableView fx:id="tb" onMouseClicked="#handleButtonAction2" prefHeight="314.0" prefWidth="729.0">
+              <columns>
+                <TableColumn fx:id="tbid" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="tbnom" prefWidth="192.0" text="NOM" />
+                  <TableColumn fx:id="tbpren" prefWidth="164.0" text="PRENOM" />
+                  <TableColumn fx:id="tbfil" prefWidth="166.0" text="FILIERER" />
+                  <TableColumn fx:id="tbniv" prefWidth="143.0" text="NIVEAU" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+      <Button fx:id="btnaj" layoutX="91.0" layoutY="431.0" mnemonicParsing="false" onMouseClicked="#getFormulaire" prefHeight="41.0" prefWidth="113.0" text="Ajouter" />
+      <Button fx:id="btnmod" layoutX="524.0" layoutY="431.0" mnemonicParsing="false" onMouseClicked="#modifierEtudiant" prefHeight="41.0" prefWidth="103.0" text="Modifier" />
+      <Button fx:id="btnsup" layoutX="316.0" layoutY="431.0" mnemonicParsing="false" onMouseClicked="#supprimerEtudiant" prefHeight="41.0" prefWidth="113.0" text="Supprimer" />
+      <Button layoutX="703.0" layoutY="431.0" mnemonicParsing="false" onMouseClicked="#Actualiser" prefHeight="41.0" prefWidth="113.0" text="Actualiser" />
+      <TextField fx:id="txtid" layoutX="31.0" layoutY="384.0" prefHeight="26.0" prefWidth="85.0" />
+      <TextField fx:id="txtnom" layoutX="132.0" layoutY="384.0" prefHeight="26.0" prefWidth="144.0" />
+      <TextField fx:id="txtpr" layoutX="287.0" layoutY="384.0" prefHeight="26.0" prefWidth="172.0" />
+      <ComboBox fx:id="fileselect" layoutX="479.0" layoutY="384.0" onMouseClicked="#selectFiliere" prefHeight="19.0" prefWidth="172.0" />
+      <ComboBox fx:id="nivselect" layoutX="674.0" layoutY="384.0" onMouseClicked="#selectNiveau" prefHeight="19.0" prefWidth="172.0" />
+      <Button fx:id="helbtn" layoutX="373.0" layoutY="509.0" mnemonicParsing="false" onMouseClicked="#helpInline" prefHeight="30.0" prefWidth="235.0" style="-fx-background-color: white;" text="help in line.." textFill="#b85f1a">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
